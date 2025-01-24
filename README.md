@@ -84,10 +84,7 @@ spring.datasource.password=sua_senha
 
 ### Gestão de Frota
 ![Frota](docs/images/frota1.png)
-
-
-
-![Frota](docs/image/frota2.png)
+![Frota](docs/images/frota2.png)
 - Alertas de documentação
 
 ## 🎯 Objetivos Alcançados
