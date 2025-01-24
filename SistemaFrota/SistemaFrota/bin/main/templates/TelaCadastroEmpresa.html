@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TransVeículos - Cadastro</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/CSS/TelaCadastroEmpresa.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="icon" type="image/x-icon" href="/IMAGENS/carrinho.ico">
+    </head>
+    <body>
+        <!-- Cabeçalho com o logo e opções de navegação -->
+        <header>
+            <div class="logo-container">
+                <img src="/IMAGENS/logo recortada.jpeg" alt="Logo TransVeículos">
+                <div>
+                    <h1>TransVeículos</h1>
+                    <p>Soluções de transporte para sua empresa</p>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><img class="icon" src="/IMAGENS/telefone.png" alt="Telefone"><a href="contato">CONTATO</a></li>
+                    <li><img class="icon" src="/IMAGENS/faq.png" alt="FAQ"><a href="faq">FAQ</a></li>
+                    <li><img class="flag" src="/IMAGENS/brasil.jpg" alt="Brasil"></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Área do formulário de cadastro -->
+        <main>
+            <section class="cadastro-container">
+                <h2>Cadastrar Empresa</h2>
+
+                <form id="formCadastroEmpresa" action="/cadastro/empresa" method="post">
+                    <div class="input-container">
+                        <label for="empresa">Nome da empresa</label>
+                        <input type="text" name="empresa" id="empresa" placeholder="Informe o nome da empresa" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Informe o e-mail da empresa" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" name="cnpj" id="cnpj" placeholder="Informe o CNPJ da empresa" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="senha">Senha</label>
+                        <div class="password-container">
+                            <input type="password" name="senha" id="senha" placeholder="Informe a senha" required>
+                            <i class="fas fa-eye toggle-password" id="toggleSenha"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="confirmarSenha">Confirmar Senha</label>
+                        <div class="password-container">
+                            <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Informe novamente a senha" required>
+                            <i class="fas fa-eye toggle-password" id="toggleConfirmarSenha"></i>
+                        </div>
+                    </div>    
+                                
+                    <button type="submit" class="cadastro-button">Cadastrar Empresa</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Rodapé da página -->
+        <footer>
+            <p>&copy; 2024 TransVeículos. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="/JS/TelaCadastroEmpresa.js"></script>
+    </body>
+</html>

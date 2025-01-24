@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Fretes</title>
+    <link rel="stylesheet" href="/CSS/TelaFretes.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="/principal" class="empresa-nome">TransVeículos</a></h1>
+        <nav>
+            <a href="#">Contato</a>
+            <a href="#">FAQ</a>
+            <img src="/IMAGENS/brasil.png" alt="Brazil Flag">
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Gerenciamento de Fretes</h1>
+            
+            <section class="fretes-section">
+                <h2>Fretes em Andamento</h2>
+                <div class="fretes-grid" th:if="${not #lists.isEmpty(fretesEmAndamento)}">
+                    <div class="frete-card" th:each="frete : ${fretesEmAndamento}">
+                        <h3 th:text="${'Frete #' + frete.id}">Frete #1</h3>
+                        <p th:text="${'Motorista: ' + frete.motorista.nome}">Motorista</p>
+                        <p th:text="${'Veículo: ' + frete.frota.placa}">Veículo</p>
+                        <div class="botoes-acao">
+                            <div th:if="${!frete.realizado and !frete.cancelado}">
+                                <form th:action="@{/fretes-realizados/{id}/concluir(id=${frete.id})}" method="POST" style="display: inline;">
+                                    <button type="submit" class="btn-concluir">Concluir Frete</button>
+                                </form>
+                            </div>
+                            <form th:action="@{/fretes/cancelar}" method="post" class="form-acao">
+                                <input type="hidden" name="freteId" th:value="${frete.id}">
+                                <button type="submit" class="btn-cancelar" 
+                                        onclick="return confirm('Tem certeza que deseja cancelar este frete?')">
+                                    ✕ Cancelar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <p th:if="${#lists.isEmpty(fretesEmAndamento)}">Não há fretes em andamento.</p>
+            </section>
+
+            <section class="fretes-section">
+                <h2>Fretes Finalizados</h2>
+                <div class="fretes-grid" th:if="${not #lists.isEmpty(fretesFinalizados)}">
+                    <div class="frete-card" th:each="frete : ${fretesFinalizados}">
+                        <h3 th:text="${'Frete #' + frete.id}">Frete #1</h3>
+                        <p th:text="${'Motorista: ' + frete.motorista.nome}">Motorista</p>
+                        <p th:text="${'Veículo: ' + frete.frota.placa}">Veículo</p>
+                        <p th:text="${'Status: ' + (frete.cancelado ? 'Cancelado' : 'Concluído')}">Status</p>
+                </div>
+                <p th:if="${#lists.isEmpty(fretesFinalizados)}">Não há fretes finalizados.</p>
+            </section>
+
+            <section class="novo-frete">
+                <h2>Iniciar Novo Frete</h2>
+                <form th:action="@{/fretes/iniciar}" method="POST" class="form-novo-frete">
+                    <select name="planejadoId" required>
+                        <option value="">Selecione o Frete Planejado</option>
+                        <option th:each="planejado : ${fretesPlanejados}"
+                                th:value="${planejado.id}"
+                                th:text="${'Origem: ' + planejado.origem + ' - Destino: ' + planejado.destino}">
+                        </option>
+                    </select>
+                    
+                    <select name="motoristaId" required>
+                        <option value="">Selecione o Motorista</option>
+                        <option th:each="motorista : ${motoristas}"
+                                th:value="${motorista.id}"
+                                th:text="${motorista.nome + ' - CNH: ' + motorista.habilitacao}">
+                        </option>
+                    </select>
+                    
+                    <select name="frotaId" required>
+                        <option value="">Selecione o Veículo</option>
+                        <option th:each="frota : ${frotas}"
+                                th:value="${frota.id}"
+                                th:text="${frota.veiculo + ' - Placa: ' + frota.placa}">
+                        </option>
+                    </select>
+
+                    <button type="submit">Iniciar Frete</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 TransVeículos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/JS/TelaFretes.js"></script>
+</body>
+</html> 

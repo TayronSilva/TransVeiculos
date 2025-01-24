@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TransVeículos</title>
+        <link rel="stylesheet" href="/CSS/TelaPrincipal.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
+        <link rel="icon" type="image/x-icon" href="/IMAGENS/carrinho.ico">
+    </head>
+
+    <body>
+        <header>
+            <div class="logo-container">
+                <a href="/principal" class="logo-link">
+                    <img src="/IMAGENS/logo recortada.jpeg" alt="Logo TransVeículos" class="logo">
+                </a>
+
+                <div>
+                    <h1>TransVeículos</h1>
+                    <p>Soluções de transporte para sua empresa</p>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><img class="icon" src="/IMAGENS/telefone.png" alt="Telefone"><a href="contato">CONTATO</a></li>
+                    <li><img class="icon" src="/IMAGENS/faq.png" alt="FAQ"><a href="faq">FAQ</a></li>
+
+                    <li><a href="#" onclick="toggleLogin()">ENTRAR</a></li>
+                    
+                    <li><img class="icon" src="/IMAGENS/brasil.jpg" alt="Brasil"></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="loginModal" class="modal" onclick="closeModal(event)">
+            <div class="modal-content">
+                <h2>Minha Conta</h2>
+                <img class="popup-image" src="/IMAGENS/fotologinm.jpg" alt="Foto de Login">
+                <button onclick="registrar()">📝 Registrar</button>
+                <button onclick="login()">🔑 Login</button>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="/IMAGENS/banner.png" alt="Banner TransVeículos">
+        </div>
+
+        <div class="services">
+            <h3>Nossos Serviços</h3>
+            <div class="service-cards">
+                <div class="card">Serviço 1</div>
+                <div class="card">Serviço 2</div>
+                <div class="card">Serviço 3</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 TransVeículos. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="/JS/TelaPrincipal.js"></script>
+    </body>
+</html>

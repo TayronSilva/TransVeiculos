@@ -1,0 +1,265 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo geral */
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Área principal do conteúdo */
+.content
+{
+    flex: 1;
+}
+
+/* Cabeçalho */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #511A79;
+    color: white;
+    padding: 15px 30px;
+    border-bottom: 3px solid #FFD700;
+}
+
+header h1
+{
+    font-size: 24px;
+    color: white;
+}
+
+.logo-container
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img
+{
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.logo-container h1
+{
+    font-size: 24px;
+    color: white;
+}
+
+.logo-container p
+{
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 5px;
+}
+
+.navbar ul
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li
+{
+    position: relative;
+}
+
+.navbar ul li img.icon
+{
+    height: 40px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.navbar ul li img.flag
+{
+    width: 30px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #fff;
+}
+
+.navbar ul li a
+{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover
+{
+    color: #FFD700;
+}
+
+.menu
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover
+{
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+.cadastro-container
+{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-container h2
+{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #511A79;
+}
+
+.form-group
+{
+    margin-bottom: 15px;
+}
+
+.form-group label
+{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button
+{
+    width: 100%;
+    padding: 10px;
+    background-color: #511A79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover
+{
+    background-color: #6A2C91;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer
+{
+    background-color: #511A79;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    margin-top: auto; /* Garante que o rodapé fique no final */
+}
+
+/* Responsividade */
+@media (max-width: 768px)
+{
+    .logo-container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container img
+    {
+        height: 50px;
+    }
+
+    .navbar ul
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li
+    {
+        margin-bottom: 10px;
+    }
+
+    .menu
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group
+    {
+        flex-direction: column;
+    }
+
+    .form-group input
+    {
+        width: 100%;
+    }
+
+    button
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px)
+{
+    h1
+    {
+        font-size: 20px;
+    }
+
+    form
+    {
+        padding: 15px;
+    }
+
+    .menu a
+    {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Frota</title>
+        <link rel="stylesheet" href="/CSS/TelaFrota.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <a href="/principal" class="logo-link">
+                    <img src="/IMAGENS/logo recortada.jpeg" alt="Logo TransVeículos" class="logo">
+                </a>
+                <div>
+                    <h1>TransVeículos</h1>
+                    <p>Soluções de transporte para sua empresa</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="contato">CONTATO</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form id="veiculo-form" action="/cadastro/frota" method="POST">
+                <h2>Cadastrar Frota</h2>
+                <fieldset>
+                    <legend>Informações do Veículo</legend>
+                    <label for="veiculo">Tipo de Veículo</label>
+                    <input type="text" id="veiculo" name="veiculo" placeholder="Informe o tipo de veículo" required>
+                    
+                    <label for="modelo">Veículo (Marca/Modelo)</label>
+                    <input type="text" id="modelo" name="modelo" placeholder="Informe o marca/modelo do veículo" required>
+                    
+                    <label for="placa">Placa</label>
+                    <input type="text" id="placa" name="placa" placeholder="Informe a placa do veículo" required>
+                    
+                    <label for="cor">Cor</label>
+                    <input type="text" id="cor" name="cor" placeholder="Informe a cor do veículo" required>
+                    
+                    <label for="ano">Ano</label>
+                    <input type="number" id="ano" name="ano" placeholder="Informe o ano de fabricação do veículo" required min="1900">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Documentação e Custos</legend>
+                    <label for="ipva">IPVA</label>
+                    <input type="number" id="ipva" name="ipva" placeholder="Informe o valor do IPVA do veículo" step="0.01">
+                    
+                    <label for="seguro">Seguro</label>
+                    <input type="number" id="seguro" name="seguro" placeholder="Informe o valor do seguro do veículo" step="0.01">
+                    
+                    <label for="licenciamento">Licenciamento</label>
+                    <input type="number" id="licenciamento" name="licenciamento" placeholder="Informe o licenciamento do veículo" step="0.01">
+                    
+                    <label for="obrigatorio">Seguro Obrigatório</label>
+                    <input type="number" id="obrigatorio" name="obrigatorio" placeholder="Informe o valor do seguro obrigatório veículo (DPVAT)" step="0.01">
+                    
+                    <label for="precoaluguel">Preço de Aluguel</label>
+                    <input type="number" id="precoaluguel" name="precoaluguel" placeholder="Informe o valor de aluguel do veículo" step="0.01" required>
+                    
+                    <label for="documentacao">Vencimento da Documentação</label>
+                    <input type="date" id="documentacao" name="documentacao" required>
+                    
+                    <label for="status">Status da Documentação</label>
+                    <select id="status" name="status" required>
+                        <option value="1">Em Dia</option>
+                        <option value="0">Em Atraso</option>
+                    </select>
+                </fieldset>
+            
+                <button type="submit">Cadastrar Frota</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>© 2024 TransVeículos. Todos os direitos reservados.</p>
+        </footer>
+        <script src="/JS/TelaFrota.js"></script>
+    </body>
+</html>

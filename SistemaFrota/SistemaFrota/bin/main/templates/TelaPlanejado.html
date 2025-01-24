@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Frete Planejado</title>
+    <link rel="stylesheet" href="/CSS/TelaPlanejado.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/x-icon" href="/IMAGENS/carrinho.ico">
+</head>
+<body>
+<header>
+    <h1><a href="/principal" class="empresa-nome">TransVeículos</a></h1>
+    <nav>
+        <a href="#">Contato</a>
+        <a href="#">FAQ</a>
+        <img src="/IMAGENS/brasil.png" alt="Brazil Flag">
+    </nav>
+</header>
+
+<main>
+    <h2>Cadastrar Frete Planejado</h2>
+    <form id="frete-form" action="/cadastro/planejado" method="POST">
+        <fieldset>
+            <legend>Informações do Frete</legend>
+            <div class="form-group">
+                <label for="origem">Origem</label>
+                <input type="text" id="origem" name="origem" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="destino">Destino</label>
+                <input type="text" id="destino" name="destino" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="volume">Volume (m³)</label>
+                <input type="number" id="volume" name="volume" step="0.01" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" name="peso" step="0.01" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datas e Valores</legend>
+            <div class="form-group">
+                <label for="inicio">Data de Início</label>
+                <input type="date" id="inicio" name="inicio" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fim">Data de Fim</label>
+                <input type="date" id="fim" name="fim" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="preco">Preço (R$)</label>
+                <input type="number" id="preco" name="preco" step="0.01" required>
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="submit">Cadastrar Frete</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+
+    <a href="/principal">Voltar para tela inicial</a>
+</main>
+
+<footer>
+    <p>© 2024 TransVeículos. Todos os direitos reservados.</p>
+</footer>
+
+<script src="/JS/TelaPlanejado.js"></script>
+</body>
+</html> 

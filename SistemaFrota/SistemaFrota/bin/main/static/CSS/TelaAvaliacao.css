@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+header {
+    background-color: #511A79;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.empresa-nome {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav img {
+    height: 20px;
+}
+
+/* Main content */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #511A79;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Form styles */
+.form-avaliacao {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #511A79;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 120px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+/* Button styles */
+.btn-confirmar {
+    width: 100%;
+    background-color: #511A79;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-confirmar:hover {
+    background-color: #6A2C91;
+}
+
+/* Error message */
+.erro-mensagem {
+    background-color: #ffe6e6;
+    color: #dc3545;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #511A79;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .form-avaliacao {
+        padding: 0;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+} 

@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #511A79;
+    color: white;
+    padding: 15px 30px;
+    border-bottom: 3px solid #FFD700;
+}
+
+.logo-container
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img
+{
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.logo-container h1
+{
+    font-size: 24px;
+    color: white;
+}
+
+.logo-container p
+{
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 5px;
+}
+
+/* Menu de navegação */
+.navbar ul
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li
+{
+    position: relative;
+}
+
+.navbar ul li img.icon
+{
+    height: 40px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.navbar ul li img.flag
+{
+    width: 30px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #fff;
+}
+
+.navbar ul li a
+{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover
+{
+    color: #FFD700;
+}
+
+/* Seção de Login */
+.login-container
+{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2
+{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #511A79;
+}
+
+.input-container
+{
+    margin-bottom: 15px;
+}
+
+.input-container label
+{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-container input
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.password-container
+{
+    position: relative;
+}
+
+.password-container input
+{
+    padding-right: 40px;
+}
+
+.password-container .toggle-password
+{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.password-container .toggle-password:hover
+{
+    color: #511A79;
+    opacity: 1;
+}
+
+
+/* Links e Botões */
+.forgot-password
+{
+    font-size: 0.9rem;
+    color: #511A79;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.forgot-password:hover
+{
+    text-decoration: underline;
+}
+
+.login-button, .register-button
+{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #511A79;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover, .register-button:hover
+{
+    background-color: #6A2C91;
+}
+
+/* Rodapé */
+footer
+{
+    background-color: #511A79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p
+{
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px)
+{
+    .logo-container h1
+    {
+        font-size: 1.2rem;
+    }
+
+    .logo-container p
+    {
+        font-size: 0.9rem;
+    }
+
+    .navbar ul
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li
+    {
+        margin: 10px 0;
+    }
+
+    .input-container input
+    {
+        padding: 10px;
+    }
+
+    .login-button, .register-button
+    {
+        padding: 12px;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px)
+{
+    header
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul
+    {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li
+    {
+        margin: 5px 0;
+    }
+
+    .login-container
+    {
+        padding: 20px;
+    }
+
+    .input-container input
+    {
+        padding: 10px;
+    }
+
+    .login-button, .register-button
+    {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .eye-icon
+    {
+        font-size: 1.2rem;
+    }
+}

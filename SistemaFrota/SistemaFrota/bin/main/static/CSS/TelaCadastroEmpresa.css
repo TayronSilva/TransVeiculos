@@ -1,0 +1,219 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #511A79;
+    color: white;
+    padding: 15px 30px;
+    border-bottom: 3px solid #FFD700;
+}
+
+.logo-container
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img
+{
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.logo-container h1
+{
+    font-size: 24px;
+    color: white;
+}
+
+.logo-container p
+{
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 5px;
+}
+
+/* Menu de navegação */
+.navbar ul
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li
+{
+    position: relative;
+}
+
+.navbar ul li img.icon
+{
+    height: 40px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.navbar ul li img.flag
+{
+    width: 30px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #fff;
+}
+
+.navbar ul li a
+{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover
+{
+    color: #FFD700;
+}
+
+/* Formulário */
+.cadastro-container
+{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-container h2
+{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #511A79;
+}
+
+.input-container
+{
+    margin-bottom: 15px;
+}
+
+.input-container label
+{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-container input
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilização do botão mostrar senha */
+.password-container
+{
+    position: relative;
+}
+
+.password-container input
+{
+    padding-right: 40px;
+}
+
+.password-container .toggle-password
+{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.password-container .toggle-password:hover
+{
+    color: #511A79;
+    opacity: 1;
+}
+
+/* Botão de cadastro */
+.cadastro-button
+{
+    width: 100%;
+    background-color: #511A79;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cadastro-button:hover
+{
+    background-color: #3f0c60;
+}
+
+/* Rodapé */
+footer
+{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #511A79;
+    color: white;
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px)
+{
+    .logo-container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container img
+    {
+        height: 50px;
+    }
+
+    .navbar ul
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li
+    {
+        margin-bottom: 10px;
+    }
+}

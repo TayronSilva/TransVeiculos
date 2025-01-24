@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tela Cadastrar Motorista</title>
+        <link rel="stylesheet" href="/CSS/TelaMotorista.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="icon" type="image/x-icon" href="/IMAGENS/carrinho.ico">
+    </head>
+    <body>
+        <!-- Cabeçalho -->
+        <header>
+            <div class="logo-container">
+                <img src="/IMAGENS/logo recortada.jpeg" alt="Logo TransVeículos">
+                <div>
+                    <h1>TransVeículos</h1>
+                    <p>Soluções de transporte para sua empresa</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><img class="icon" src="/IMAGENS/telefone.png" alt="Telefone"><a href="contato">CONTATO</a></li>
+                    <li><img class="icon" src="/IMAGENS/faq.png" alt="FAQ"><a href="faq">FAQ</a></li>
+                    <li><img class="flag" src="/IMAGENS/brasil.jpg" alt="Brasil"></li>
+                </ul>
+            </nav>
+        </header>        
+
+            <!-- Conteúdo principal -->
+            <main>
+                <section class="cadastro-container">
+                    <h2>Cadastrar Motorista</h2>
+
+                    <form id="form-cadastro" action="/cadastro/motorista" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Informe o nome do motorista" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Informe o endereço do motorista" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Informe o telefone do motorista" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="identidade">Identidade</label>
+                            <input type="text" id="identidade" name="identidade" placeholder="Informe a identidade do motorista" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="habilitacao">Habilitação</label>
+                            <input type="text" id="habilitacao" name="habilitacao" placeholder="Informe a habilitação do motorista" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="precohora">Preço Hora</label>
+                            <input type="number" id="precohora" name="precohora" placeholder="Informe o valor da hora do motorista" required step="0.01">
+                        </div>
+                    
+                        <button type="submit">Cadastrar Motorista</button>
+                    </form>
+                </section>       
+            </main>
+
+        <!-- Rodapé -->
+        <footer>
+            &copy; 2024 TransVeículos. Todos os direitos reservados.
+        </footer>
+
+        <script src="/JS/TelaCadastroMotorista.js"></script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransVeículos - Menu</title>
+    <link rel="stylesheet" href="/CSS/TelaPrincipal.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Adicionando SweetAlert -->
+    <link rel="icon" type="image/x-icon" href="/IMAGENS/carrinho.ico">
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-container">
+          <a href="/principal" class="logo-link">
+              <img src="/IMAGENS/logo recortada.jpeg" alt="Logo TransVeículos" class="logo">
+          </a>
+
+          <div>
+              <h1>TransVeículos</h1>
+              <p>Soluções de transporte para sua empresa</p>
+          </div>
+      </div>
+
+      <nav class="navbar">
+          <ul>
+              <li><img class="icon" src="/IMAGENS/telefone.png" alt="Telefone"><a href="contato">CONTATO</a></li>
+              <li><img class="icon" src="/IMAGENS/faq.png" alt="FAQ"><a href="faq">FAQ</a></li>
+
+              <li><a href="#" onclick="toggleMenu()">MENU</a></li>
+              
+              <li><img class="icon" src="/IMAGENS/brasil.jpg" alt="Brasil"></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div id="menuModal" class="modal" onclick="closeModal(event)">
+      <div class="modal-content">
+        <h2>Bem-vindo à TransVeículos!</h2>
+
+        <button onclick="cadastrarFrota()">🚗 Cadastrar Frota</button>
+        <button onclick="cadastrarMotorista()">👤 Cadastrar Motorista</button>
+        <button onclick="cadastrarPlanejado()">📋 Cadastrar Frete</button>
+        <button onclick="gerenciarFretes()">🚚 Gerenciar Fretes</button>
+        <button onclick="entrarPerfil()">🔧 Ir para o Perfil</button>
+        <button onclick="logout()">🚪 Sair</button>
+      </div>
+    </div>
+
+    <div class="banner">
+    <img src="/IMAGENS/banner.png" alt="Banner TransVeículos">
+    </div>
+
+    <div class="services">
+      <h3>Nossos Serviços</h3>
+
+      <div class="service-cards">
+        <div class="card">Serviço 1</div>
+        <div class="card">Serviço 2</div>
+        <div class="card">Serviço 3</div>
+      </div>
+    </div>
+
+    <footer>
+    <p>&copy; 2024 TransVeículos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/JS/TelaMenu.js"></script>
+  </body>
+</html>

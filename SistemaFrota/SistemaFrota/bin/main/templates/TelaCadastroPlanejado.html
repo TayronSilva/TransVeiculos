@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Frete Planejado</title>
+    <link rel="stylesheet" href="/CSS/TelaCadastroPlanejado.css">
+    <link rel="icon" type="image/x-icon" href="/IMAGENS/carrinho.ico">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="/principal" class="logo-link">
+                <img src="/IMAGENS/logo recortada.jpeg" alt="Logo TransVeículos" class="logo">
+            </a>
+            <div>
+                <h1>TransVeículos</h1>
+                <p>Cadastro de Frete Planejado</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Novo Frete Planejado</h2>
+        
+        <form th:action="@{/cadastro/planejado/salvar}" method="post" id="formPlanejado">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="origem" class="required">Origem</label>
+                    <input type="text" id="origem" name="origem" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="destino" class="required">Destino</label>
+                    <input type="text" id="destino" name="destino" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataInicial" class="required">Data Inicial</label>
+                    <input type="date" id="dataInicial" name="dataInicial" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataFinal" class="required">Data Final Prevista</label>
+                    <input type="date" id="dataFinal" name="dataFinal" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="motorista" class="required">Motorista</label>
+                    <select id="motorista" name="motoristaId" required>
+                        <option value="">Selecione um motorista</option>
+                        <option th:each="motorista : ${motoristas}"
+                                th:value="${motorista.id}"
+                                th:text="${motorista.nome}">
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="frota" class="required">Veículo</label>
+                    <select id="frota" name="frotaId" required>
+                        <option value="">Selecione um veículo</option>
+                        <option th:each="frota : ${frotas}"
+                                th:value="${frota.id}"
+                                th:text="${frota.placa + ' - ' + frota.modelo}">
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="valor" class="required">Valor do Frete (R$)</label>
+                    <input type="number" id="valor" name="valor" step="0.01" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn-secondary" onclick="window.location.href='/fretes'">
+                    Cancelar
+                </button>
+                <button type="submit" class="btn-primary">
+                    Cadastrar Frete
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TransVeículos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('formPlanejado').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            Swal.fire({
+                title: 'Confirmar cadastro',
+                text: "Deseja realmente cadastrar este frete planejado?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#511A79',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Sim, cadastrar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.submit();
+                }
+            });
+        });
+
+        // Validação de datas
+        document.getElementById('dataInicial').addEventListener('change', function() {
+            document.getElementById('dataFinal').min = this.value;
+        });
+
+        // Define a data mínima como hoje
+        const hoje = new Date().toISOString().split('T')[0];
+        document.getElementById('dataInicial').min = hoje;
+        document.getElementById('dataFinal').min = hoje;
+    </script>
+</body>
+</html> 

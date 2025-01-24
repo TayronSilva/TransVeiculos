@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Perfil</title>
+    <link rel="stylesheet" href="/CSS/TelaPerfil.css">
+    <link rel="icon" type="image/x-icon" href="/IMAGENS/carrinho.ico">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2 th:text="'Bem-vindo, ' + ${empresaLogada.empresa}">Bem-vindo</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/principal">🏠 Página Inicial</a></li>
+                <li><a href="/perfil">👤 Meu Perfil</a></li>
+                <li><a href="/fretes">🚚 Gerenciar Fretes</a></li>
+                <li><a href="#">📊 Relatórios</a></li>
+                <li><a href="/logout">🚪 Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <div class="container">
+            <h1>Dashboard</h1>
+
+            <!-- Estatísticas -->
+            <section class="stats-section">
+                <h2>Estatísticas Gerais</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total de Frotas</h3>
+                        <p th:text="${totalFrotas}">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total de Motoristas</h3>
+                        <p th:text="${totalMotoristas}">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Entregas Realizadas</h3>
+                        <p th:text="${totalEntregas}">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ações Rápidas -->
+            <section class="actions-section">
+                <h2>Ações Rápidas</h2>
+                <div class="actions-grid">
+                    <a href="/cadastro/frota" class="action-button">
+                        🚗 Cadastrar Nova Frota
+                    </a>
+                    <a href="/cadastro/motorista" class="action-button">
+                        👤 Cadastrar Novo Motorista
+                    </a>
+                    <a href="/cadastro/planejado" class="action-button">
+                        📋 Cadastrar Novo Frete
+                    </a>
+                    <a href="/fretes" class="action-button">
+                        🚚 Gerenciar Fretes
+                    </a>
+                    <a href="#" class="action-button">
+                        📊 Gerar Relatórios
+                    </a>
+                </div>
+            </section>
+
+            <!-- Cards de Informação -->
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Últimas Atividades</h3>
+                    <div class="card-content">
+                        <p>Visualize suas últimas ações no sistema</p>
+                        <span class="card-description">Mantenha-se atualizado sobre suas operações</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Desempenho</h3>
+                    <div class="card-content">
+                        <p>Acompanhe o desempenho da sua empresa</p>
+                        <span class="card-description">Estatísticas e métricas importantes</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Suporte</h3>
+                    <div class="card-content">
+                        <p>Precisa de ajuda?</p>
+                        <span class="card-description">Entre em contato com nossa equipe de suporte</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #511A79;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 15px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #6A2C91;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 270px; /* Para dar espaço para a sidebar */
+            padding: 20px;
+            width: calc(100% - 270px); /* Ajusta a largura do conteúdo principal */
+        }
+
+        .container {
+            max-width: 1200px; /* Limita a largura máxima do conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo */
+        }
+
+        h1 {
+            color: #511A79; /* Cor do título */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+        }
+
+        .dashboard-buttons {
+            display: flex; /* Flexbox para os botões */
+            gap: 20px; /* Espaçamento entre os botões */
+            justify-content: flex-start; /* Alinha os botões à esquerda */
+            margin-top: 40px; /* Espaço acima dos botões */
+        }
+
+        .button {
+            padding: 15px 30px; /* Espaçamento interno dos botões */
+            font-size: 1.1rem; /* Tamanho da fonte dos botões */
+            color: white; /* Cor do texto dos botões */
+            background-color: #511A79; /* Cor de fundo dos botões */
+            border: none; /* Remove borda padrão */
+            border-radius: 5px; /* Bordas arredondadas dos botões */
+            cursor: pointer; /* Indica que é clicável */
+            transition: background-color 0.3s ease; /* Transição suave para hover */
+        }
+
+        .button:hover {
+            background-color: #6A2C91; /* Cor de fundo ao passar o mouse nos botões */
+        }
+    </style>
+</body>
+</html>

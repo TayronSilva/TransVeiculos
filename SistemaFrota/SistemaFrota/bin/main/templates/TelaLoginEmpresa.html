@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TransVeículos - Login</title>
+        <link rel="stylesheet" href="/CSS/TelaLogin.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="icon" type="image/x-icon" href="/IMAGENS/carrinho.ico">
+    </head>
+
+    <body>
+        <header>
+            <div class="logo-container">
+                <img src="/IMAGENS/logo recortada.jpeg" alt="Logo TransVeículos">
+                <div>
+                    <h1>TransVeículos</h1>
+                    <p>Soluções de transporte para sua empresa</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><img class="icon" src="/IMAGENS/telefone.png" alt="Telefone"><a href="contato">CONTATO</a></li>
+                    <li><img class="icon" src="/IMAGENS/faq.png" alt="FAQ"><a href="faq">FAQ</a></li>
+                    <li><img class="icon" src="/IMAGENS/brasil.jpg" alt="Brasil"></li>
+                </ul>
+            </nav>
+        </header>
+
+    <main>
+        <section class="login-container">
+            <h2>Acesse sua conta</h2>
+
+            <form action="/login" method="post">
+                <div class="input-container">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" name="cnpj" id="cnpj" placeholder="Digite seu CNPJ">
+                </div>
+
+                <div class="input-container">
+                    <label for="senha">Senha</label>
+                    <div class="password-container">
+                        <input type="password" name="senha" id="senha" placeholder="Digite a senha" required>
+                        <i class="fas fa-eye toggle-password" id="toggleSenha"></i>
+                    </div>
+                </div>   
+
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+
+            <div th:if="${errorMessage}" class="error-message">
+                <p th:text="${errorMessage}" style="color: red;"></p>
+            </div>
+
+            <form action="/cadastro/empresa" method="get">
+                <button type="submit" class="register-button">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TransVeículos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/JS/TelaLoginEmpresa.js"></script>
+    </body>
+</html>

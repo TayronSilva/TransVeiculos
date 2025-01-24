@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Início de Frete</title>
+    <link rel="stylesheet" href="/CSS/TelaFretes.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmar Início de Frete</h1>
+        
+        <div class="frete-card">
+            <h2>Detalhes do Frete Planejado</h2>
+            <p><strong>Motorista:</strong> <span th:text="${planejado.motorista.nome}">Nome do Motorista</span></p>
+            <p><strong>Veículo:</strong> <span th:text="${planejado.frota.placa}">Placa do Veículo</span></p>
+            <p><strong>Origem:</strong> <span th:text="${planejado.origem}">Origem</span></p>
+            <p><strong>Destino:</strong> <span th:text="${planejado.destino}">Destino</span></p>
+            
+            <form th:action="@{/fretes/iniciar}" method="post" class="form-confirmar">
+                <input type="hidden" name="planejadoId" th:value="${planejado.id}">
+                <div class="botoes-acao">
+                    <button type="submit" class="btn-confirmar">Iniciar Frete</button>
+                    <a href="/fretes" class="btn-cancelar">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 
