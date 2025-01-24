@@ -1,7 +1,7 @@
 # TransVeículos - Sistema de Gerenciamento de Frota 🚛
 
 ## 📋 Sobre o Projeto
-TransVeículos é um sistema web desenvolvido como projeto acadêmico para o CEFET-MG, com o objetivo de transformar uma planilha de controle de frota em uma aplicação web moderna e funcional. O projeto nasceu a partir de um desafio proposto em sala de aula, onde recebemos uma planilha básica de controle de veículos e tivemos a liberdade de expandir e modernizar o conceito.
+TransVeículos é um sistema web desenvolvido como projeto acadêmico para o CEFET-NI, com o objetivo de transformar uma planilha de controle de frota em uma aplicação web moderna e funcional. O projeto nasceu a partir de um desafio proposto em sala de aula, onde recebemos uma planilha básica de controle de veículos e tivemos a liberdade de expandir e modernizar o conceito.
 
 ## 🎯 Motivação
 A partir de uma simples planilha de Excel, visualizei a oportunidade de criar uma solução que não apenas digitalizasse o processo, mas também:
