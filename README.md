@@ -13,7 +13,7 @@ A partir de uma simples planilha de Excel, visualizei a oportunidade de criar um
 ## 💻 Tecnologias Utilizadas
 
 ### Backend
-- **Java 17**
+- **Java 23**
 - **Spring Boot 3.2.2**
 - **Spring Security** - Para autenticação e autorização
 - **Spring Data JPA** - Para persistência de dados
