@@ -54,7 +54,7 @@ A partir de uma simples planilha de Excel, visualizei a oportunidade de criar um
 ## 🔧 Como Usar
 
 ### Requisitos
-- Java 17 ou superior
+- Java 23 ou superior
 - MySQL 8.0 ou superior
 - Gradlew
 
@@ -67,6 +67,27 @@ spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 3. Execute a aplicação
 
+## 📃 Pré-requisitos para Executar o Projeto
+
+Certifique-se de que seu ambiente de desenvolvimento possui as seguintes ferramentas instaladas:
+
+### JDK (Java Development Kit)
+- **Versão:** 23 ou superior
+- **Download:** [Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) ou [OpenJDK](https://openjdk.org/)
+
+### Gradle Wrapper (Gradlew)
+- O Gradlew está incluído no projeto, mas é necessário ter o **Java** configurado corretamente para utilizá-lo.
+
+### MySQL
+- **Versão:** 8.0 ou superior
+- **Download:** [MySQL Community Server](https://dev.mysql.com/downloads/)
+
+### IDE Recomendadas
+- **IntelliJ IDEA**
+- **Eclipse**
+- **Visual Studio Code** (com extensões Java configuradas)
+
+Após instalar os pré-requisitos, siga as etapas de configuração do projeto descritas acima para executar a aplicação corretamente.
 
 ## 📱 Interfaces do Sistema
 
@@ -94,7 +115,7 @@ spring.datasource.password=sua_senha
 - Sistema de alertas e notificações
 - Gestão eficiente de recursos
 
-## 🔜 Próximos Passos
+## 🖐 Próximos Passos
 - Implementação de aplicativo mobile
 - Integração com APIs de rastreamento
 - Módulo de relatórios avançados
@@ -105,10 +126,11 @@ Tayronne A.
 - GitHub: [@TayronSilva](https://github.com/TayronSilva)
 - LinkedIn: [Tayronne Silva](https://www.linkedin.com/in/tayronne-silva/)
 
-## 📝 Licença
+## 🖍 Licença
 Este projeto está sob a licença [MIT](LICENSE).
 
 ## 🙏 Agradecimentos
 - Professor Francisco Henrique pela orientação e desafio proposto
 - CEFET-NI pela oportunidade de desenvolvimento
 - Colegas de classe pelas sugestões e feedback
+
