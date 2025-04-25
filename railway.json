@@ -1,4 +1,0 @@
-{
-  "buildCommand": "cd SistemaFrota && ./gradlew build -x test",
-  "startCommand": "java -jar SistemaFrota/build/libs/*.jar"
-}
