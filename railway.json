@@ -1,8 +1,4 @@
 {
-  "build": {
-    "builder": "paketobuildpacks/builder:base",
-    "buildCommand": "mvn clean install -DskipTests",
-    "startCommand": "java -jar target/*.jar"
-  }
+  "buildCommand": "./gradlew build -x test",
+  "startCommand": "java -jar build/libs/*.jar"
 }
-
