@@ -1,136 +1,138 @@
-# TransVeículos - Sistema de Gerenciamento de Frota 🚛
+# TransVeículos - Fleet Management System 🚛
 
-## 📋 Sobre o Projeto
-TransVeículos é um sistema web desenvolvido como projeto acadêmico para o CEFET-NI, com o objetivo de transformar uma planilha de controle de frota em uma aplicação web moderna e funcional. O projeto nasceu a partir de um desafio proposto em sala de aula, onde recebemos uma planilha básica de controle de veículos e tivemos a liberdade de expandir e modernizar o conceito.
+## 📋 About the Project
+TransVeículos is a web-based system developed as an academic project for CEFET-NI, with the goal of transforming a fleet management spreadsheet into a modern and functional web application. The project originated from a classroom challenge, where we received a basic vehicle management spreadsheet and were given the freedom to expand and modernize the concept.
 
-## 🎯 Motivação
-A partir de uma simples planilha de Excel, visualizei a oportunidade de criar uma solução que não apenas digitalizasse o processo, mas também:
-- Automatizasse o controle de documentação
-- Facilitasse o gerenciamento de motoristas
-- Permitisse o planejamento eficiente de fretes
-- Oferecesse uma visão clara das operações em tempo real
+## 🎯 Motivation
+Starting with a simple Excel spreadsheet, I saw an opportunity to create a solution that would not only digitize the process, but also:
 
-## 💻 Tecnologias Utilizadas
+- Automate document control
+- Facilitate driver management
+- Enable efficient freight planning
+- Offer a clear view of operations in real time
+
+## 💻 Technologies Used
 
 ### Backend
 - **Java 23**
 - **Spring Boot 3.2.2**
-- **Spring Security** - Para autenticação e autorização
-- **Spring Data JPA** - Para persistência de dados
-- **MySQL** - Banco de dados
-- **Lombok** - Redução de boilerplate
-- **Gradlew** - Gerenciamento de dependências
+- **Spring Security** - For authentication and authorization
+- **Spring Data JPA** - For data persistence
+- **MySQL** - Database
+- **Lombok** - Boilerplate reduction
+- **Gradlew** - Dependency management
 
 ### Frontend
 - **Thymeleaf** - Template engine
 - **HTML5/CSS3**
+
 - **JavaScript**
-- **SweetAlert2** - Para alertas e notificações
-- **Bootstrap** - Framework CSS (opcional)
+- **SweetAlert2** - For alerts and notifications
+- **Bootstrap** - CSS framework (optional)
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-### 1. Gestão de Empresas
-- Cadastro e autenticação de empresas
-- Perfil personalizado
-- Dashboard com informações relevantes
+### 1. Company Management
+- Company registration and authentication
+- Personalized profile
+- Dashboard with relevant information
 
-### 2. Gestão de Frota
-- Cadastro completo de veículos
-- Controle de documentação (IPVA, seguro, licenciamento)
-- Alertas de vencimento de documentos
+### 2. Fleet Management
+- Complete vehicle registration
+- Document control (IPVA, insurance, licensing)
+- Document expiration alerts
 
-### 3. Gestão de Motoristas
-- Cadastro de motoristas
-- Controle de documentação (CNH)
-- Histórico de fretes realizados
+### 3. Driver Management
+- Driver registration
+- Document control (driver's license)
+- History of completed freight deliveries
 
-### 4. Gestão de Fretes
-- Planejamento de fretes
-- Acompanhamento em tempo real
-- Registro de fretes realizados
-- Histórico completo de operações
+### 4. Freight Management
+- Freight planning
+- Real-time monitoring
+- Record of completed freight deliveries
+- Complete history of operations
 
-## 🔧 Como Usar
+## 🔧 How to Use
 
-### Requisitos
-- Java 23 ou superior
-- MySQL 8.0 ou superior
+### Requirements
+- Java 23 or higher
+- MySQL 8.0 or higher
 - Gradlew
 
-### Configuração
-1. Clone o repositório
-2. Configure o banco de dados no arquivo `application.properties`
+### Configuration
+1. Clone the repository
+2. Configure the database in the `application.properties` file
 properties:
-spring.datasource.url=jdbc:mysql://localhost:3306/seu_banco
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
-3. Execute a aplicação
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+3. Run the application
 
-## 📃 Pré-requisitos para Executar o Projeto
+## 📃 Prerequisites for Running the Project
 
-Certifique-se de que seu ambiente de desenvolvimento possui as seguintes ferramentas instaladas:
+Make sure your development environment has the following tools installed:
 
 ### JDK (Java Development Kit)
-- **Versão:** 23 ou superior
-- **Download:** [Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) ou [OpenJDK](https://openjdk.org/)
+- **Version:** 23 or higher
+- **Download:** [Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://openjdk.org/)
 
 ### Gradle Wrapper (Gradlew)
-- O Gradlew está incluído no projeto, mas é necessário ter o **Java** configurado corretamente para utilizá-lo.
+- Gradlew is included in the project, but you need to have **Java** correctly configured to use it.
 
 ### MySQL
-- **Versão:** 8.0 ou superior
+- **Version:** 8.0 or higher
 - **Download:** [MySQL Community Server](https://dev.mysql.com/downloads/)
 
-### IDE Recomendadas
+### Recommended IDEs
 - **IntelliJ IDEA**
 - **Eclipse**
-- **Visual Studio Code** (com extensões Java configuradas)
+- **Visual Studio Code** (with Java extensions configured)
 
-Após instalar os pré-requisitos, siga as etapas de configuração do projeto descritas acima para executar a aplicação corretamente.
+After installing the prerequisites, follow the project configuration steps described above to run the application correctly.
 
-## 📱 Interfaces do Sistema
+## 📱 System Interfaces
 
-### Tela de Login
+### Login Screen
 ![Login](docs/images/login.png)
-- Interface intuitiva para acesso ao sistema
-- Recuperação de senha
-- Registro de novas empresas
+- Intuitive interface for accessing the system
+- Password recovery
+- Registration of new companies
 
-### Dashboard Principal
+### Main Dashboard
 ![Dashboard](docs/images/dashboard.png)
-- Visão geral da frota
-- Indicadores importantes
-- Acesso rápido às principais funcionalidades
+- Fleet overview
+- Key indicators
+- Quick access to main functionalities
 
-### Gestão de Frota
-![Frota](docs/images/frota1.png)
-![Frota](docs/images/frota2.png)
-- Alertas de documentação
+### Fleet Management
+![Fleet](docs/images/frota1.png)
+![Fleet](docs/images/frota2.png)
+- Documentation alerts
 
-## 🎯 Objetivos Alcançados
-- Transformação de uma planilha em um sistema web completo
-- Interface intuitiva e responsiva
-- Automatização de processos manuais
-- Sistema de alertas e notificações
-- Gestão eficiente de recursos
+## 🎯 Achieved Objectives
+- Transformation of a spreadsheet into a complete web system
+- Intuitive and responsive interface
+- Automation of manual processes
+- Alert and notification system
+- Efficient resource management
 
-## 🖐 Próximos Passos
-- Implementação de aplicativo mobile
-- Integração com APIs de rastreamento
-- Módulo de relatórios avançados
-- Sistema de manutenção preventiva
+## 🖐 Next Steps
+- Mobile application implementation
+- Integration with tracking APIs
+- Advanced reporting module
+- Preventive maintenance system
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 Tayronne A.
 - GitHub: [@TayronSilva](https://github.com/TayronSilva)
 - LinkedIn: [Tayronne Silva](https://www.linkedin.com/in/tayronne-silva/)
 
-## 🖍 Licença
-Este projeto está sob a licença [MIT](LICENSE).
+## 🖍 License
+This project is licensed under the [MIT](LICENSE) license.
 
-## 🙏 Agradecimentos
-- Professor Francisco Henrique pela orientação e desafio proposto
-- CEFET-NI pela oportunidade de desenvolvimento
-- Colegas de classe pelas sugestões e feedback
+## 🙏 Acknowledgements
+- Professor Francisco Henrique for guidance and the proposed challenge
+- CEFET-NI for the development opportunity
+- Classmates for suggestions and feedback
 
